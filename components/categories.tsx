@@ -17,16 +17,9 @@ const categories = [
 			  {name:'SERP探索器',desc:'基于Web的Keyword Insights工具',url:'https://www.keywordinsights.ai/serp-explorer/'},
 			  {name:'SERP相似度',desc:'基于Web的Keyword Insights工具',url:'https://www.keywordinsights.ai/serp-similarity/'},
 			  {name:'Larseo',desc:'基于Web的Larseo工具',url:'https://larseo.app/'},
+
+
 		],
-	},
-	{
-		name: '关键词衍生问题查询工具',
-		desc: '加入你的产品是iPhone，也许你会从相关的问题列表中找到合适的推广素材',
-		links: [
-			  {name:'AlsoAsked',desc:'标题叫“也有人问”,意思是你的关键词别人是这么问的，',url:'https://alsoasked.com/'},
-			  {name:'Answer The Public',desc:'同AlsoAsked，多了TikTok搜索，呈现的方式和AlsoAsked不太一样',url:'https://answerthepublic.com/'},
-			  {name:'QuestionDB',desc:'也是一款根据关键词收集相关问题的网站',url:'https://questiondb.io/'},
-			  {name:'WordStream',desc:'也是一款根据关键词收集相关问题的网站',url:'https://www.wordstream.com/keywords'},
 	},
 	{
 		name: '页面SEO工具',
