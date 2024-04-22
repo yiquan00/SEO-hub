@@ -1,6 +1,6 @@
 const categories = [
 	{
-		name: '关键词研究工具',
+		name: '关键词热度查询工具',
 		desc: '查询关键词排名、热度相关',
 		links: [
 			  { name: 'Google Ads Keyword Planner', desc: '关键词投放建议，也可用于了解关键词热度', url: 'https://ads.google.com/home/tools/keyword-planner/' },
