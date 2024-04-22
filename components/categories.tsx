@@ -20,15 +20,20 @@ const categories = [
 
 
 		],
-		[
-			{name:'AlsoAsked',desc:'标题叫“也有人问”,意思是你的关键词别人是这么问的，',url:'https://alsoasked.com/'},
+	},
+	{
+		name: '关键词拓展问题',
+		desc: '查询关键词相关的问题，假如你在推广iPhone，也许你可以从问题列表找到感兴趣的问题，并提供相应的教程',
+		links: [
+			  
+			  {name:'AlsoAsked',desc:'标题叫“也有人问”,意思是你的关键词别人是这么问的，',url:'https://alsoasked.com/'},
 			  {name:'Answer The Public',desc:'同AlsoAsked，多了TikTok搜索，呈现的方式和AlsoAsked不太一样',url:'https://answerthepublic.com/'},
 			  {name:'QuestionDB',desc:'也是一款根据关键词收集相关问题的网站',url:'https://questiondb.io/'},
 			  {name:'WordStream',desc:'也是一款根据关键词收集相关问题的网站',url:'https://www.wordstream.com/keywords'},
-			],
-	},
-	{
-		[],
+			
+
+
+		],
 	},
 	{
 		name: '页面SEO工具',
