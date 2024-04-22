@@ -28,7 +28,7 @@ export default function Hero() {
 
           {/* Section header */}
           <div className="text-center pb-12 md:pb-16">
-            <h1 className="text-5xl md:text-6xl font-extrabold leading-tighter tracking-tighter mb-4" data-aos="zoom-y-out">常用 SEO <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-teal-400">工具集</span></h1>
+            <h1 className="text-5xl md:text-6xl font-extrabold leading-tighter tracking-tighter mb-4" data-aos="zoom-y-out">常用SEO <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-teal-400">工具集</span></h1>
             <div className="max-w-3xl mx-auto">
               <p className="text-xl text-gray-600 mb-8" data-aos="zoom-y-out" data-aos-delay="150">一个提供 SEO 工具和如何使用它们的教程的网站，帮助提高您在 Google、bing、TikTok 等网站的 SEO 排名。</p>
             </div>
