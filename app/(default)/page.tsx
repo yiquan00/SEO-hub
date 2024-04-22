@@ -1,6 +1,6 @@
 export const metadata = {
-  title: 'SEO tool hub: One-Stop Solution for all your SEO needs.',
-  description: 'SEO.aitoolpro.work:Your One-Stop Solution for all your SEO needs. Our comprehensive suite includes keyword research, backlink analysis, and rank tracking tools to optimize your online presence.',
+  title: 'SEO tool hub:One-Stop Solution for all your SEO needs.',
+  description: 'SEO tool hub:Your One-Stop Solution for all your SEO needs. Includes keyword research, backlink analysis, and rank tracking tools to optimize your online presence.',
 }
 
 import Hero from '@/components/hero'
