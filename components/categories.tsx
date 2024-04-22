@@ -1,6 +1,6 @@
 const categories = [
 	{
-		name: '关键词研究工具',
+		name: '关键词搜索、热度工具',
 		desc: '查询关键词排名、热度相关',
 		links: [
 			  { name: 'Google Ads Keyword Planner', desc: '关键词投放建议，也可用于了解关键词热度', url: 'https://ads.google.com/home/tools/keyword-planner/' },
@@ -20,6 +20,15 @@ const categories = [
 
 
 		],
+		[
+			{name:'AlsoAsked',desc:'标题叫“也有人问”,意思是你的关键词别人是这么问的，',url:'https://alsoasked.com/'},
+			  {name:'Answer The Public',desc:'同AlsoAsked，多了TikTok搜索，呈现的方式和AlsoAsked不太一样',url:'https://answerthepublic.com/'},
+			  {name:'QuestionDB',desc:'也是一款根据关键词收集相关问题的网站',url:'https://questiondb.io/'},
+			  {name:'WordStream',desc:'也是一款根据关键词收集相关问题的网站',url:'https://www.wordstream.com/keywords'},
+			],
+	},
+	{
+		[],
 	},
 	{
 		name: '页面SEO工具',
