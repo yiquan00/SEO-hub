@@ -31,7 +31,7 @@ const categories = [
 	},
 	{
 		name: '页面访问情况分析',
-		desc:'了解页面采集、浏览情况'
+		desc:'了解页面采集、浏览情况',
 		links: [
 			  {name:'Google搜索控制台',desc:'谷歌搜索控制台，查看流量分布',url:'https://search.google.com/search-console/about'},
 			  {name:'Bing网站管理员工具站点',desc:'',url:'https://www.bing.com/webmasters/help/seo-reports-55a30304'},
