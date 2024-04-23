@@ -23,6 +23,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="zh-cmn-Hans">
+    <meta name="msvalidate.01" content="768DBFEBE060D2901AD3673A59DAB193" />
       <body className={`${inter.variable} font-inter antialiased bg-gray-100 text-gray-900 tracking-tight`}>
         <div className="flex flex-col min-h-screen overflow-hidden supports-[overflow:clip]:overflow-clip">
           <Header />
