@@ -7,10 +7,6 @@ const categories = [
 			  { name: 'Google Trends', desc: '谷歌趋势，可了解不同地区关键词搜索情况（大体上）', url: 'https://trends.google.com/trends/?geo=US' },
 			  {name:'Bing网站管理员工具关键词研究',desc:'虽然必应搜索份额不大，但，不要把鸡蛋放一个篮子，对吧。',url:'https://www.bing.com/webmasters/help/keyword-research-628070b6'},
 			  {name:'“免费”的关键词生成',desc:'免费的关键词生成网站，有条件的免费，可查询目标关键词热度，Ahrefs出品',url:'https://ahrefs.com/keyword-generator'},
-			  {name:'AlsoAsked',desc:'标题叫“也有人问”,意思是你的关键词别人是这么问的，',url:'https://alsoasked.com/'},
-			  {name:'Answer The Public',desc:'同AlsoAsked，多了TikTok搜索，呈现的方式和AlsoAsked不太一样',url:'https://answerthepublic.com/'},
-			  {name:'QuestionDB',desc:'也是一款根据关键词收集相关问题的网站',url:'https://questiondb.io/'},
-			  {name:'WordStream',desc:'也是一款根据关键词收集相关问题的网站',url:'https://www.wordstream.com/keywords'},
 			  {name:'#SuggestMrx',desc:'需要翻墙，关键字拓展',url:'https://www.suggestmrx.com/index-en.php'},
 			  {name:'Reddit关键词研究工具',desc:'可理解为一个公告平台（或者简单点，理解为是微信公众号）上的热门关键词',url:'https://www.highervisibility.com/free-seo-tools/keyworddit/'},
 			  {name:'Keyword Surfer',desc:'谷歌浏览器拓展工具，在搜索的时候可给予拓展词、搜索量等提示',url:'https://chrome.google.com/webstore/detail/keyword-surfer/bafijghppfhdpldihckdcadbcobikaca?hl=en'},
@@ -19,6 +15,17 @@ const categories = [
 			  {name:'Larseo',desc:'基于Web的Larseo工具',url:'https://larseo.app/'},
 
 
+		],
+	},
+	{
+		name: '关键词衍生问题查询',
+		desc: '假如你在推广iPhone，也许你能从问题列表找到“我该怎么将iPhone强制关机”的热门话题，并提供对应的教程以吸引用户访问你的网站',
+		links: [
+			  
+			  {name:'AlsoAsked',desc:'标题叫“也有人问”,意思是你的关键词别人是这么问的，',url:'https://alsoasked.com/'},
+			  {name:'Answer The Public',desc:'同AlsoAsked，多了TikTok搜索，呈现的方式和AlsoAsked不太一样',url:'https://answerthepublic.com/'},
+			  {name:'QuestionDB',desc:'也是一款根据关键词收集相关问题的网站',url:'https://questiondb.io/'},
+			  {name:'WordStream',desc:'也是一款根据关键词收集相关问题的网站',url:'https://www.wordstream.com/keywords'},
 		],
 	},
 	{
