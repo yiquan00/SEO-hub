@@ -40,8 +40,8 @@ export default function Header() {
 							<Link href="/" className="font-medium text-gray-600 hover:text-gray-900 px-5 py-3 flex items-center transition duration-150 ease-in-out">SEO 工具集</Link>
 							
 						</li>
-						{/*<li>
-						<Link href='/course'>教程 </Link>
+						<li>
+						<Link href='/hreflang' className="font-medium text-gray-600 hover:text-gray-900 px-5 py-3 flex items-center transition duration-150 ease-in-out">hreflang-generator</Link>
 						</li>
 						
 							{/*<li>

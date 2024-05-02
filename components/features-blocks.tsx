@@ -47,6 +47,8 @@ export default function FeaturesBlocks() {
 	      </div>
 	    </div>
 	  ))}
+		
+
         </div>
       </div>
     </section>
