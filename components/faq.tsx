@@ -46,7 +46,7 @@ export default function Faq() {
       {/* FAQ Item */}
       <div className="mb-6 max-w-4xl border-b-[2px] border-[#dfdfdf] p-8">
         <div className="flex cursor-pointer justify-between">
-          <p className="text-xl font-bold"></p>
+          <p className="text-xl font-bold">What other themes do you have?</p>
           {/*
           <div className="relative ml-10 mt-1 flex h-5 w-5 items-center justify-center">
             <div className="absolute h-5 w-0.5 bg-[#276ef1]"></div>
@@ -54,13 +54,11 @@ export default function Faq() {
           </div>
           */}
         </div>
-        <p className="my-4">
-
-        </p>
+        <p className="my-4">Pellentesque in nisi aliquet, pellentesque purus eget, imperdiet turpis. Fusce at enim quis neque viverra convallis. Vivamus ut elementum leo, eget tempus nisl. Sed viverra enim ac turpis posuere consectetur. Sed enim nibh, consequat vitae lacus eu, ullamcorper ullamcorper massa. Pellentesque purus eget, imperdiet turpis.</p>
       </div>
     </div>
   {/* */}
-
+    
 
 
 
