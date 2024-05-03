@@ -31,11 +31,15 @@ export default function HreflangTagGenerator() {
     setConfigurations(updatedConfigurations);
   };
 
-  const updateConfiguration = (index:number, field:string, value:string) => {
-    const updatedConfigurations = [...configurations];
-    updatedConfigurations[index][field] = value;
-    setConfigurations(updatedConfigurations);
-  };
+ const updateConfiguration = (index: number, field: string, value: string) => {
+  const updatedConfigurations = [...configurations];
+  const configuration = updatedConfigurations[index];
+  if (configuration) {
+    configuration[field] = value;
+  }
+  setConfigurations(updatedConfigurations);
+};
+
 
 {/* 存储生成的标签 */}
     const [hreflangTags, setHreflangTags] = useState([]);
