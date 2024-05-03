@@ -25,7 +25,7 @@ export default function HreflangTagGenerator() {
     setConfigurations([...configurations, { lang: '', country: '', url: '' }]);
   };
 
-  const removeConfiguration = (index) => {
+  const removeConfiguration = (index:number) => {
     const updatedConfigurations = [...configurations];
     updatedConfigurations.splice(index, 1);
     setConfigurations(updatedConfigurations);
