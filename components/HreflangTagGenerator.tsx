@@ -37,7 +37,7 @@ const removeConfiguration = (index: number) => {
   const updatedConfigurations = [...configurations];
   const configuration = updatedConfigurations[index];
   if (configuration) {
-    configuration[field] = value;
+    configuration[1] = value;
   }
   setConfigurations(updatedConfigurations);
 };
