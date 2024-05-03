@@ -31,7 +31,7 @@ export default function HreflangTagGenerator() {
     setConfigurations(updatedConfigurations);
   };
 
-  const updateConfiguration = (index:number, field, value) => {
+  const updateConfiguration = (index:number, field:number, value:number) => {
     const updatedConfigurations = [...configurations];
     updatedConfigurations[index][field] = value;
     setConfigurations(updatedConfigurations);
