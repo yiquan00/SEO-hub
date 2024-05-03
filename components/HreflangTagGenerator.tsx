@@ -33,7 +33,7 @@ const removeConfiguration = (index: number) => {
   }
 };
 
- const updateConfiguration = (index: number, field: string, value: string) => {
+ const updateConfiguration = (index: number, field: number, value: string) => {
   const updatedConfigurations = [...configurations];
   const configuration = updatedConfigurations[index];
   if (configuration) {
