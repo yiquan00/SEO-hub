@@ -43,19 +43,7 @@ export default function Faq() {
   {/* BG Image */}
   <img src="https://assets.website-files.com/63904f663019b0d8edf8d57c/639832e3e7aba393eeeba215_plain6.svg" alt="" className="absolute bottom-auto left-0 right-auto top-0 inline-block sm:bottom-auto sm:left-4 sm:right-auto sm:top-8 md:left-20 md:top-16" />
 
-      {/* FAQ Item */}
-      <div className="mb-6 max-w-4xl border-b-[2px] border-[#dfdfdf] p-8">
-        <div className="flex cursor-pointer justify-between">
-          <p className="text-xl font-bold">What other themes do you have?</p>
-          {/*
-          <div className="relative ml-10 mt-1 flex h-5 w-5 items-center justify-center">
-            <div className="absolute h-5 w-0.5 bg-[#276ef1]"></div>
-            <div className="h-0.5 w-5 bg-[#276ef1]"></div>
-          </div>
-          */}
-        </div>
-        <p className="my-4">Pellentesque in nisi aliquet, pellentesque purus eget, imperdiet turpis. Fusce at enim quis neque viverra convallis. Vivamus ut elementum leo, eget tempus nisl. Sed viverra enim ac turpis posuere consectetur. Sed enim nibh, consequat vitae lacus eu, ullamcorper ullamcorper massa. Pellentesque purus eget, imperdiet turpis.</p>
-      </div>
+
     </div>
   {/* */}
     
