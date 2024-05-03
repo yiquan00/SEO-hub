@@ -25,11 +25,13 @@ export default function HreflangTagGenerator() {
     setConfigurations([...configurations, { lang: '', country: '', url: '' }]);
   };
 
-  const removeConfiguration = (index:number) => {
-    const updatedConfigurations = [...configurations];
-    updatedConfigurations.splice(index, 1);
-    setConfigurations(updatedConfigurations);
-  };
+const removeConfiguration = (index: number) => {
+  if (index >= 0 && index < configurations.length) {
+    setConfigurations(configurations.filter((_, i) => i !== index));
+  } else {
+    console.error('Index out of bounds');
+  }
+};
 
  const updateConfiguration = (index: number, field: string, value: string) => {
   const updatedConfigurations = [...configurations];
