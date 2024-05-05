@@ -15,7 +15,7 @@ export default function HreflangTagGenerator() {
 
 
   const [showToast, setShowToast] = useState(false);
-  const [originalUrl, setOriginalUrl] = useState('');
+  const [originalUrl, setOriginalUrl] = useState<string>('');
 // 首先，定义一个接口来描述单个配置项的类型
 interface Configuration {
   lang: string;
@@ -68,7 +68,7 @@ const addConfiguration = () => {
 };
 
 // 移除指定配置行的函数
-const removeConfiguration = index => {
+const removeConfiguration = (index: number)  => {
   setConfigurations(configurations.filter((_, idx) => idx !== index));
 };
 
@@ -77,13 +77,15 @@ const removeConfiguration = index => {
 
 
  {/* 复制内容 */}
-  const handleCopyText = () => {
-      const textArea = document.querySelector('#hreflangTags');
-      textArea.select();
-      document.execCommand('copy');
-      setShowToast(true);
-      setTimeout(() => setShowToast(false), 3000);
-    };
+  const handleCopyText = async () => {
+  try {
+    await navigator.clipboard.writeText(hreflangTags);
+    setShowToast(true);
+    setTimeout(() => setShowToast(false), 3000);
+  } catch (err) {
+    console.error('Error copying text: ', err);
+  }
+};
 
 
 
