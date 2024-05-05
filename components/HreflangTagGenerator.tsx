@@ -16,8 +16,33 @@ export default function HreflangTagGenerator() {
 
   const [showToast, setShowToast] = useState(false);
   const [originalUrl, setOriginalUrl] = useState('');
-const [configurations, setConfigurations] = useState([{ lang: '', country: '', url: '' }]);
-  
+// 首先，定义一个接口来描述单个配置项的类型
+interface Configuration {
+  lang: string;
+  country: string;
+  url: string;
+}
+
+// 使用interface来初始化state，以确保configurations数组中的对象符合Configuration接口的形状。
+const [configurations, setConfigurations] = useState<Configuration[]>([{ lang: '', country: '', url: '' }]);
+
+// 然后，为updateConfiguration的参数添加类型注解。
+// index 是数组索引，所以它的类型是number
+// field 是Configuration的键，所以它的类型是 keyof Configuration
+// value 是输入值，这里我们假设它是string类型
+const updateConfiguration = (index: number, field: keyof Configuration, value: string) => {
+  const newConfigurations = configurations.map((config, idx) => {
+    if (idx === index) {
+      // 下面这行代码使用了计算属性名，这对TypeScript来说是安全的
+      // 因为它知道field必然是'lang', 'country'或'url'之一
+      return { ...config, [field]: value };
+    }
+    return config;
+  });
+  setConfigurations(newConfigurations);
+};  
+
+
 {/* 存储生成的标签 */}
 const [hreflangTags, setHreflangTags] = useState([]);
 const generateHreflangTags = () => {
@@ -47,16 +72,6 @@ const removeConfiguration = index => {
   setConfigurations(configurations.filter((_, idx) => idx !== index));
 };
 
-// 更新配置行的函数
-const updateConfiguration = (index, field, value) => {
-  const newConfigurations = configurations.map((config, idx) => {
-    if (idx === index) {
-      return { ...config, [field]: value }; // 使用计算属性名称更新特定字段
-    }
-    return config;
-  });
-  setConfigurations(newConfigurations);
-};
 
 
 
