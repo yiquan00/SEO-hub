@@ -8,7 +8,7 @@ import FeaturesBg from '@/public/images/features-bg.png'
 import FeaturesElement from '@/public/images/features-element.png'
 import languages from '@/components/languages'
 import Faq from '@/components/faq'
-
+import Footer from '@/components/ui/footer'
 
 export default function HreflangTagGenerator() {
 
@@ -102,7 +102,7 @@ const removeConfiguration = (index: number)  => {
 
           {/* Section header */}
           <div className="max-w-3xl mx-auto text-center pb-12 md:pb-16">
-            <h1 className="h2 mb-4">Free Hreflang Tag <span className="bg-[url('https://assets.website-files.com/63904f663019b0d8edf8d57c/639156ce1c70c97aeb755c8a_Rectangle%2010%20(1).svg')] bg-cover bg-center px-4 text-white">Generator </span>  </h1>
+            <h1 className=" text-3xl font-semibold capitalize md:text-5xl">免费 Hreflang Tag <span className="bg-[url('https://assets.website-files.com/63904f663019b0d8edf8d57c/639156ce1c70c97aeb755c8a_Rectangle%2010%20(1).svg')] bg-cover bg-center px-4 text-white">生成器 </span>  </h1>
             <p className="text-xl text-gray-600">Easily generate hreflang tags for your website.</p>
           </div>
 
@@ -111,14 +111,15 @@ const removeConfiguration = (index: number)  => {
 
             {/* Original URL input and label */}
             <div className="flex flex-wrap items-start mb-4 w-full">
-              <label htmlFor="originalUrl" className="text-xl font-semibold w-full"><span className="text-blue-500">Default URL</span><i className="text-gray-500 text-base">-This is the default global page URL that does not have any country or language associated with it</i></label>
+              <label htmlFor="originalUrl" className="text-xl font-semibold w-full"><span className="text-blue-500">默认网址</span><i className="text-gray-500 text-base">- Google 建议在没有其他适合的选项会使用默认的x-defautl 标签</i></label>
               <input type="text" id="originalUrl" value={originalUrl} onChange={(e) => setOriginalUrl(e.target.value)} placeholder="default url" className="w-1/3 p-2 border border-gray-300 rounded" />
             </div>
             {configurations.map((configuration, index) => (
               <div key={index} className="flex flex-wrap items-center mb-4">
-                <label htmlFor="originalUrl" className="text-xl font-semibold w-full"><span className="text-blue-500">Country/Language Variations</span><i className="text-gray-500 text-base">-Define URLs for each country/language variation</i></label>
-                <input type="text" value={configuration.url} onChange={(e) => updateConfiguration(index, 'url', e.target.value)} placeholder="Define URLs for each language variation" className="w-60 p-2  border-gray-300 " />
-                <select value={configuration.lang} onChange={(e) => updateConfiguration(index, 'lang', e.target.value)} className='  border-gray-300 '>
+                <label htmlFor="originalUrl" className="text-xl font-semibold w-full"><span className="text-blue-500">其他语言/地区</span><i className="text-gray-500 text-base">-为每个地区/语言的内容定义网址</i></label>
+                <input type="text" value={configuration.url} onChange={(e) => updateConfiguration(index, 'url', e.target.value)} placeholder="Define URLs for each language variation" className="w-60 p-2  border-gray-300  rounded" />
+                <select value={configuration.lang} onChange={(e) => updateConfiguration(index, 'lang', e.target.value)} className=' ml-2
+                 border-gray-300 rounded'>
                   {languages.map((language) => (
                     <option key={language.code} value={language.code}>
                       {language.name}
@@ -165,6 +166,9 @@ const removeConfiguration = (index: number)  => {
 
           </div>
       <Faq />
+       <Footer />
+
+
         </div>
       </div>
 
@@ -176,16 +180,11 @@ const removeConfiguration = (index: number)  => {
                  <svg className="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
             <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
         </svg>
-              <div className="ps-4 text-sm font-normal"> Copy  success.</div>
+              <div className="ps-4 text-sm font-normal"> 复制成功</div>
 </div>
 
           )}
 
-
-
-
-
-    {/* 如下是常见问题 */}
 
 
     </section>
