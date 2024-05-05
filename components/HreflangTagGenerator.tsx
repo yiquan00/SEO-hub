@@ -44,17 +44,17 @@ const updateConfiguration = (index: number, field: keyof Configuration, value: s
 
 
 {/* 存储生成的标签 */}
-const [hreflangTags, setHreflangTags] = useState([]);
+const [hreflangTags, setHreflangTags] = useState(''); // 明确声明hreflangTags是字符串类型
 const generateHreflangTags = () => {
   const tags = [];
   // 添加默认语言的标签
   tags.push(`<link rel="alternate" hreflang="x-default" href="${originalUrl}" />`);
   // 添加其他语言的标签
-  configurations.forEach((config) => {
-    if(config.url && config.lang) {
+  configurations.forEach(config => {
+    if (config.url && config.lang) {
       const hreflang = `${config.lang}`.toLowerCase();
       tags.push(`<link rel="alternate" hreflang="${hreflang}" href="${config.url}" />`);
-    }      
+    }
   });
   setHreflangTags(tags.join('\n'));
 };
