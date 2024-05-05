@@ -41,17 +41,17 @@ export default function Faq() {
     </div>
   </div>
 
-  <div class="mb-6 gap-6 overflow-hidden rounded-2xl border border-solid border-[#7e7e7e] bg-white p-8">
-          <div class="mb-4 flex flex-row">
-            <img src="https://ahrefs.com/blog/zh/wp-content/themes/Ahrefs-4/images/authors/JoshuaHardwick.jpg" alt="" class="mr-4 inline-block h-16 w-16 " />
-            <div class="flex flex-col">
-              <h6 class="text-base font-semibold">来自 Ahref 的示例说明</h6>
-              <p class="text-sm text-[#636262]">Joshua Hardwick</p>
+  <div className="mb-6 gap-6 overflow-hidden rounded-2xl border border-solid border-[#7e7e7e] bg-white p-8">
+          <div className="mb-4 flex flex-row">
+            <img src="https://ahrefs.com/blog/zh/wp-content/themes/Ahrefs-4/images/authors/JoshuaHardwick.jpg" alt="" className="mr-4 inline-block h-16 w-16 " />
+            <div className="flex flex-col">
+              <h6 className="text-base font-semibold">来自 Ahref 的示例说明</h6>
+              <p className="text-sm text-[#636262]">Joshua Hardwick</p>
             </div>
           </div>
-          <p class="mb-4 text-sm ">想象一下你经营一家销售单一产品的电子商务商店，你的商店向美国和英国发货，这两个国家都以英语为母语，但是美国客户希望以美元购买，而英国客户希望以英镑购买。</p>
-          <p class="mb-4 text-sm ">为了解决这个问题，你创建了两个版本的产品页面，一个以美元显示价格，另一个以英镑显示。</p>
-          <p class="mb-4 text-sm ">撇开定价不谈，这两个页面是相同的，因此需要使用 hreflang 标签向搜索引擎表明这两个版本存在的原因。</p>
+          <p className="mb-4 text-sm ">想象一下你经营一家销售单一产品的电子商务商店，你的商店向美国和英国发货，这两个国家都以英语为母语，但是美国客户希望以美元购买，而英国客户希望以英镑购买。</p>
+          <p className="mb-4 text-sm ">为了解决这个问题，你创建了两个版本的产品页面，一个以美元显示价格，另一个以英镑显示。</p>
+          <p className="mb-4 text-sm ">撇开定价不谈，这两个页面是相同的，因此需要使用 hreflang 标签向搜索引擎表明这两个版本存在的原因。</p>
           
         </div>
 
@@ -106,8 +106,8 @@ export default function Faq() {
         <p className="mb-4">hreflang 有两种部署方式，一种是放在head标签中，例如：<a className="text-blue-600" href="https://seo.aitoolpro.work/hreflang">[点击使用]</a> ，另一种是通过sitemap生成，例如：<a className="text-blue-600" href="https://seo.aitoolpro.work/hreflang">[点击使用]</a>，如果是页面不多且不需要经常更换，可以使用前者，如果页面比较多，则采用后者会合适，具体可看<a className="text-blue-600" href="https://ahrefs.com/blog/zh/hreflang-tags/">[点击访问]</a></p>
       </div>
     </div>
-    {/* FAQ Text */}
   </div>
+
 </section>
 
 
