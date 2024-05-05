@@ -12,59 +12,56 @@ import Faq from '@/components/faq'
 
 export default function HreflangTagGenerator() {
 
-   {/* 定义内容 */}
 
 
-   const [showToast, setShowToast] = useState(false);
+  const [showToast, setShowToast] = useState(false);
   const [originalUrl, setOriginalUrl] = useState('');
-  const [configurations, setConfigurations] = useState([{ lang: '', country: '', url: '' }]);
+const [configurations, setConfigurations] = useState([{ lang: '', country: '', url: '' }]);
   
-
-
-  const addConfiguration = () => {
-    setConfigurations([...configurations, { lang: '', country: '', url: '' }]);
-  };
-
-const removeConfiguration = (index: number) => {
-  if (index >= 0 && index < configurations.length) {
-    setConfigurations(configurations.filter((_, i) => i !== index));
-  } else {
-    console.error('Index out of bounds');
-  }
-};
-
- const updateConfiguration = (index: number, field: number, value: string) => {
-  const updatedConfigurations = [...configurations];
-  const configuration = updatedConfigurations[index];
-  if (configuration) {
-    configuration[1] = value;
-  }
-  setConfigurations(updatedConfigurations);
-};
-
-
-
-
-
-
 {/* 存储生成的标签 */}
-    const [hreflangTags, setHreflangTags] = useState([]);
-    const generateHreflangTags = () => {
-    const tags = [];
-    // 添加默认语言的标签
-    tags.push(`<link rel="alternate" hreflang="x-default" href="${originalUrl}" />`);
-    // 添加其他语言的标签
-    configurations.forEach((config) => {
+const [hreflangTags, setHreflangTags] = useState([]);
+const generateHreflangTags = () => {
+  const tags = [];
+  // 添加默认语言的标签
+  tags.push(`<link rel="alternate" hreflang="x-default" href="${originalUrl}" />`);
+  // 添加其他语言的标签
+  configurations.forEach((config) => {
+    if(config.url && config.lang) {
+      const hreflang = `${config.lang}`.toLowerCase();
+      tags.push(`<link rel="alternate" hreflang="${hreflang}" href="${config.url}" />`);
+    }      
+  });
+  setHreflangTags(tags.join('\n'));
+};
 
-        if(config.url && config.lang) {
-           const hreflang = `${config.lang}`.toLowerCase();
-            tags.push(`<link rel="alternate" hreflang="${hreflang}" href="${config.url}" />`);
-        }      
-    });
-    setHreflangTags(tags.join('\n'));
-  };
+// 添加新的配置行的函数
+const addConfiguration = () => {
+  setConfigurations([
+    ...configurations,
+    { url: '', lang: '', country: '' } // 新行的初始值为为空
+  ]);
+};
 
- {/* toast函数 */}
+// 移除指定配置行的函数
+const removeConfiguration = index => {
+  setConfigurations(configurations.filter((_, idx) => idx !== index));
+};
+
+// 更新配置行的函数
+const updateConfiguration = (index, field, value) => {
+  const newConfigurations = configurations.map((config, idx) => {
+    if (idx === index) {
+      return { ...config, [field]: value }; // 使用计算属性名称更新特定字段
+    }
+    return config;
+  });
+  setConfigurations(newConfigurations);
+};
+
+
+
+
+ {/* 复制内容 */}
   const handleCopyText = () => {
       const textArea = document.querySelector('#hreflangTags');
       textArea.select();
@@ -72,35 +69,6 @@ const removeConfiguration = (index: number) => {
       setShowToast(true);
       setTimeout(() => setShowToast(false), 3000);
     };
-
-
-const generateSitemapContent = () => {
-  const sitemapContent = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  ${hreflangTags.map((tag) => {
-    const loc = tag.match(/href="(.*?)"/)[1]; // 提取loc的值
-    const hreflang = tag.match(/hreflang="(.*?)"/)[1]; // 提取hreflang的值
-    return `  <url>
-      <loc>${loc}</loc>
-      <hreflang>${hreflang}</hreflang>
-    </url>
-    `;
-  }).join('')}
-</urlset>`;
-  return sitemapContent;
-};
-
-
-  const handleCopySitemap = () => {
-    const sitemapContent = generateSitemapContent(); // 生成sitemap内容
-    const textArea = document.createElement('textarea');
-    textArea.value = sitemapContent;
-    document.body.appendChild(textArea);
-    textArea.select();
-    document.execCommand('copy');
-    document.body.removeChild(sitemapContent);
-    alert('内容已复制到剪贴板！');
-  };
 
 
 
